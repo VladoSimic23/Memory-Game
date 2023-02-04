@@ -1,5 +1,5 @@
 ## About
-This game is built with the [vite](https://vitejs.dev/) and typescript
+This game is built with the [Vite](https://vitejs.dev/) and (Typescript)[https://www.typescriptlang.org/]
 
 ## Site URL
 https://vsimic-memory.netlify.app/
