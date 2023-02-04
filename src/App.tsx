@@ -119,10 +119,12 @@ const App: React.FC<AppProps> = ({ cards }) => {
         ))}
       </div>
 
-      {/* Message to show success or failure of matching pair */}
-      <div className="message">
-        <h1>{message}</h1>
-      </div>
+      {/* Message to show after you completed the game and shows in how many moves you completed the game */}
+      {cardStates.every((card) => card.solved) && (
+        <div className="message">
+          <h1>{message}</h1>
+        </div>
+      )}
     </div>
   );
 };
