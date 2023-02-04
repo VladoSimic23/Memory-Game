@@ -1,0 +1,111 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+p {
+  color: black;
+}
+h1 {
+  font-size: 40px;
+  line-height: 1;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid gray;
+  padding: 10px;
+}
+
+.card {
+  width: 120px;
+  height: 120px;
+  background-color: white;
+  border: 1px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  position: relative;
+  transition: transform 0.3s;
+  transform-style: preserve-3d;
+}
+
+.card.flipped {
+  transform: rotateY(360deg);
+}
+
+.card.solved {
+  background-color: lightgray;
+  cursor: default;
+}
+
+.message {
+  margin-top: 20px;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.grid4 {
+  max-width: 700px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.btnContainer {
+  padding: 30px;
+  text-align: center;
+}
+
+button {
+  padding: 8px 30px;
+  border: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 30px;
+  }
+  .card {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  p {
+    font-size: 30px;
+  }
+  h1 {
+    font-size: 26px;
+  }
+  .grid4 {
+    grid-gap: 10px;
+    padding: 0 60px;
+  }
+  .card {
+    width: 60px;
+    height: 60px;
+  }
+}
